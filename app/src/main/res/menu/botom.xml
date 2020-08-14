@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/profil"
+        android:title="Profil" />
+    <item
+        android:id="@+id/facture"
+        android:title="Facture" />
+    <item
+        android:id="@+id/calculette"
+        android:title="Calculette" />
+    <item
+        android:id="@+id/clients"
+        android:title="Clients" />
+</menu>
