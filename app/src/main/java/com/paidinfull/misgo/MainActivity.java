@@ -33,11 +33,11 @@ public class MainActivity extends AppCompatActivity {
         ActivityCompat.requestPermissions(MainActivity.this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_EXTERNAL_STORAGE},
                 PackageManager.PERMISSION_GRANTED);
 
-        btv = (BottomNavigationView)findViewById(R.id.btv);
+        btv = findViewById(R.id.btv);
         fragmenta = new FactureFragment();
         fragment_i = new ident_fragment();
 
-        //animCrossFadeOut = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.);
+        loadFragment(fragment_i);
 
         btv.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -78,5 +78,8 @@ public class MainActivity extends AppCompatActivity {
         FragmentTransaction transaction = manager.beginTransaction();
         transaction.replace(R.id.framelala, fragment);
         transaction.commit();
+
+
     }
+
 }
