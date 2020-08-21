@@ -13,7 +13,7 @@ public class StartScreen extends AppCompatActivity {
 
     TextView nasseeha;
     protected boolean actif = true;
-    protected int splashTime = 3000;
+    protected int splashTime = 2400;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

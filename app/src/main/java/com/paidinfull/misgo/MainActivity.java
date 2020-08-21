@@ -1,6 +1,7 @@
 package com.paidinfull.misgo;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.Fragment;
@@ -8,14 +9,22 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.Manifest;
+import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.Bitmap;
+import android.net.Uri;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.view.MenuItem;
+import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -24,6 +33,11 @@ public class MainActivity extends AppCompatActivity {
     ident_fragment fragment_i;
 
     Animation animCrossFadeOut;
+    int PICK_IMAGE_REQUEST=100;
+    Uri imageFilePath;
+    Bitmap imageToStore;
+    ImageView imageView, imageView5;
+    private static int RESULT_LOAD_IMAGE = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +52,8 @@ public class MainActivity extends AppCompatActivity {
         fragment_i = new ident_fragment();
 
         loadFragment(fragment_i);
+        imageView= findViewById(R.id.imageView);
+
 
         btv.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -73,13 +89,10 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
-    private void loadFragment(Fragment fragment){
+    private void loadFragment(Fragment fragment) {
         FragmentManager manager = getSupportFragmentManager();
         FragmentTransaction transaction = manager.beginTransaction();
         transaction.replace(R.id.framelala, fragment);
         transaction.commit();
 
-
-    }
-
-}
+  }}

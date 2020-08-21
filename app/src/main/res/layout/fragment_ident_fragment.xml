@@ -66,6 +66,13 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:tint="#2B2B2B"
+            app:srcCompat="@android:drawable/ic_menu_gallery" />
+
         <Button
             android:id="@+id/button"
             android:layout_width="match_parent"
